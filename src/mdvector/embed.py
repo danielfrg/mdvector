@@ -35,7 +35,10 @@ def load_model(
         os.environ["TQDM_DISABLE"] = "1"
 
     try:
-        model = SentenceTransformer(model_name)
+        kwargs: dict = {}
+        if "onnx" in model_name.lower():
+            kwargs["backend"] = "onnx"
+        model = SentenceTransformer(model_name, **kwargs)
     finally:
         if not show_progress:
             sys.stderr = old_stderr
