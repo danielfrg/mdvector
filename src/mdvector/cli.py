@@ -4,7 +4,7 @@ from pathlib import Path
 
 import click
 
-DEFAULT_MODEL = "google/embeddinggemma-300m"
+DEFAULT_MODEL = "onnx-community/embeddinggemma-300m-ONNX"
 DEFAULT_QDRANT_URL = os.environ.get("MDVECTOR_QDRANT_URL", "http://localhost:6333")
 DEFAULT_COLLECTION = os.environ.get("MDVECTOR_QDRANT_COLLECTION", "mdvector")
 

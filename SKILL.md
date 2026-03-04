@@ -34,7 +34,7 @@ options:
                         Qdrant server URL
   --collection COLLECTION
                         Qdrant collection name (default: notes)
-  --model MODEL         Sentence-transformers model (default: google/embeddinggemma-300m)
+  --model MODEL         Sentence-transformers model (default: onnx-community/embeddinggemma-300m-ONNX)
   --limit, -n LIMIT     Number of results to return (default: 10)
   --verbose, -v         Enable verbose logging
 ```

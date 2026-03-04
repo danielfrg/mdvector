@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_MODEL = "google/embeddinggemma-300m"
+DEFAULT_MODEL = "onnx-community/embeddinggemma-300m-ONNX"
 DEFAULT_BATCH_SIZE = 32
 
 
