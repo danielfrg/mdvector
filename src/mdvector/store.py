@@ -15,6 +15,17 @@ logger = logging.getLogger(__name__)
 DEFAULT_COLLECTION = "mdvector"
 
 
+@dataclass
+class SearchResult:
+    """A single search result from Qdrant."""
+
+    point_id: str
+    score: float
+    path: str
+    title: str
+    content: str
+
+
 class QdrantStore:
     """Wrapper around QdrantClient for markdown note storage."""
 
@@ -167,14 +178,3 @@ class QdrantStore:
     def close(self) -> None:
         """Close the client connection."""
         self._client.close()
-
-
-@dataclass
-class SearchResult:
-    """A single search result from Qdrant."""
-
-    point_id: str
-    score: float
-    path: str
-    title: str
-    content: str
