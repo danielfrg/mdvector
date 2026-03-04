@@ -1,6 +1,6 @@
 [project]
 name = "mdvector"
-version = "1.0.0"
+version = "1.0.1"
 description = "Sync markdown files to vector databases"
 requires-python = ">=3.13"
 dependencies = [
