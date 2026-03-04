@@ -30,7 +30,7 @@ def sync(
     *,
     qdrant_url: str = "http://localhost:6333",
     collection: str = "mdvector",
-    model_name: str = "onnx-community/embeddinggemma-300m-ONNX",
+    model_name: str = "google/embeddinggemma-300m",
     batch_size: int = 32,
     force: bool = False,
     dry_run: bool = False,

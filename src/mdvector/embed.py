@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_MODEL = "onnx-community/embeddinggemma-300m-ONNX"
+DEFAULT_MODEL = "google/embeddinggemma-300m"
 DEFAULT_BATCH_SIZE = 32
 
 
@@ -35,10 +35,7 @@ def load_model(
         os.environ["TQDM_DISABLE"] = "1"
 
     try:
-        kwargs: dict = {}
-        if "onnx" in model_name.lower():
-            kwargs["backend"] = "onnx"
-        model = SentenceTransformer(model_name, **kwargs)
+        model = SentenceTransformer(model_name)
     finally:
         if not show_progress:
             sys.stderr = old_stderr
